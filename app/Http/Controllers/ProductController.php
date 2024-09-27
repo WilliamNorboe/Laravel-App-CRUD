@@ -40,7 +40,12 @@ class ProductController extends Controller
             'description' => 'nullable'
         ]);
         $product->update($data);
-        return redirect(route('product.index'));
+        return redirect(route('product.index'))->with('success', 'Product Updated Succesfully');
 
+    }
+
+    public function destroy(Request $request, Product $product){
+        $product->delete();
+        return redirect(route('product.index'))->with('success', 'Product Deleted Succesfully');
     }
 }
