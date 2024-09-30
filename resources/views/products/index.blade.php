@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <x-test> 5445</x-test>
+    <x-welcome></x-welcome>
     <h1>Product</h1>
     <a href="{{route('product.create')}}">Create Product</a>
     <div>
