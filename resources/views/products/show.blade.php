@@ -7,9 +7,13 @@
     <title>{{$product->name}}</title>
 </head>
 <body>
+    
     <div>{{$product->name}}</div>
     <div>{{$product->description}}</div>
     <div>{{$product->qty}}</div>
     <div>{{$product->price}}</div>
+    <script>
+    let test = @json($product);
+    console.log(test)</script>
 </body>
 </html>
