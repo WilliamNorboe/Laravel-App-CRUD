@@ -26,8 +26,10 @@ class ProductController extends Controller
             'name' => 'required',
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
-            'description' => 'nullable|Ascii'
+            'description' => 'nullable|string'
         ]);
+
+        $data['description'] = $data['description'] ?? null;
 
         $newProduct = Product::create($data);
         return redirect(route('product.index'));
@@ -43,6 +45,8 @@ class ProductController extends Controller
             'price' => 'required|decimal:0,2',
             'description' => 'nullable'
         ]);
+
+        $data['description'] = $data['description'] ?? null;
         $product->update($data);
         return redirect(route('product.index'))->with('success', 'Product Updated Succesfully');
 
