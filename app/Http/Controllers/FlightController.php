@@ -8,6 +8,6 @@ use App\Models\Flight;
 class FlightController extends Controller
 {
     public function index(){
-
+ 
     }
 }
