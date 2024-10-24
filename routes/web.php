@@ -3,8 +3,11 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Product;
+
 Route::get('/', function () {
-    return view('welcome');
+    $products = Product::all();
+    return view('welcome', ['products'=>$products]);
 });
 
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');

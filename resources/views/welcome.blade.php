@@ -16,6 +16,23 @@
         </style>
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+        @foreach($products as $product)
+                <tr>
+                    <td>{{$product->id}}</td>
+                    <td>{{$product->name}}</td>
+                    <td>{{$product->qty}}</td>
+                    <td>{{$product->price}}</td>
+                    <td>{{$product->description}}</td>
+                    <td><a href="{{route('product.edit', ['product' => $product])}}">Edit</a></td>
+                    <td>
+                        <form method = "POST" action="{{route('product.destroy', ['product' => $product])}}">
+                        @csrf
+                        @method("DELETE")
+                            <button>Delete</button>
+                        </form>
+                    </td>
+                </tr>
+        @endforeach
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
