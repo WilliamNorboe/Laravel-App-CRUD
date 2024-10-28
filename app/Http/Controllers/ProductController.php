@@ -13,7 +13,8 @@ class ProductController extends Controller
         return view('products.index', ['products'=>$products]);
     }
 
-    public function show(Product $product){
+    public function show($slug){
+        $product = Product::where('slug', $slug)->firstOrFail();
         return view('products.show', ['product'=> $product]);
     }
     
