@@ -16,12 +16,13 @@ class ProductController extends Controller
     public function show($slug){
         $product = Product::where('slug', $slug)->firstOrFail();
         return view('products.show', ['product'=> $product]);
+        
     }
     
     public function create(){
 
         return view('products.create');
-        
+
     }
 
     public function store(Request $request){
