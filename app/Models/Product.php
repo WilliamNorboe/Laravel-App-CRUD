@@ -22,7 +22,7 @@ class Product extends Model
 
         // Automatically create a slug on product creation
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->name);
+            $product->slug = Str::slug($product->name); 
         });
     }
 
