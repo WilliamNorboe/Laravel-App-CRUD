@@ -18,7 +18,7 @@
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         @foreach($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
+                    <td> {{$product->id}}</td>
                     <td>{{$product->name}}</td>
                     <td>{{$product->qty}}</td>
                     <td>{{$product->price}}</td>
