@@ -29,7 +29,7 @@ class ProductController extends Controller
             'name' => 'required',
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
-            'description' => 'nullable|string'
+            'description' => 'nullable'
         ]);
 
         $data['description'] = $data['description'] ?? null;
