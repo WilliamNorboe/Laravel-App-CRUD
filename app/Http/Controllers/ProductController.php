@@ -52,6 +52,7 @@ class ProductController extends Controller
 
         $data['description'] = $data['description'] ?? null;
         $product->update($data);
+        
         return redirect(route('product.index'))->with('success', 'Product Updated Successfully');
 
     }
