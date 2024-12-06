@@ -8,7 +8,7 @@ use App\Models\Product;
 Route::get('/', function () {
     $products = Product::all();
     return view('welcome', ['products'=>$products]);
-});
+}); 
 
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
