@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/productIndex.css') }}">
 </head>
+
 <body>
     <x-test> 5445</x-test>
     <h1>Product</h1>
