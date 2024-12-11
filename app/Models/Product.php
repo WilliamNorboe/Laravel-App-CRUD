@@ -16,13 +16,27 @@ class Product extends Model
     //     return 'title'; // db column name you would like to appear in the url.
     // }
 
+    public static function generateUniqueSlug($name)
+    {
+        $slug = Str::slug($name);
+        $originalSlug = $slug;
+        $count = 1;
+
+        while (self::where('slug', $slug)->exists()) {
+            $slug = "{$originalSlug}-{$count}";
+            $count++;
+        }
+
+        return $slug;
+    }
+
     protected static function boot()
     {
         parent::boot();
 
         // Automatically create a slug on product creation
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->name);
+            $product->slug = self::generateUniqueSlug($product->name);
         });
     }
 
