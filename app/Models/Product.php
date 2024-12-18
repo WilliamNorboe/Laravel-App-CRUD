@@ -34,7 +34,7 @@ class Product extends Model
     {
         parent::boot();
 
-        // Automatically create a slug on product creation
+        // Automatically creates a slug on product creation
         static::creating(function ($product) {
             $product->slug = self::generateUniqueSlug($product->name);
         });
