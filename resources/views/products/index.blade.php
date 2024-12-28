@@ -11,7 +11,8 @@
 <body>
     <x-test> 5445</x-test>
     <h1>Product</h1>
-    <a href="{{route('product.create')}}">Create Product</a>
+    {{-- if sucsessfully created --}}
+    <a href="{{route('product.create')}}">Create Product</a> 
     <div>
         @if (session()->has('success'))
             <div>
