@@ -7,7 +7,7 @@
     <title>{{$product->name}}</title>
 </head>
 <body>
-    
+    {{-- just product information --}}
     <div>{{$product->name}}</div>
     <div>{{$product->description}}</div>
     <div>{{$product->qty}}</div>
