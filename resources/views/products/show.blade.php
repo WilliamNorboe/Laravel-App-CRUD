@@ -12,8 +12,9 @@
     <div>{{$product->description}}</div>
     <div>{{$product->qty}}</div>
     <div>{{$product->price}}</div>
-    <script>
-    let test = @json($product);
-    console.log(test)</script>
+    {{-- <script>
+    let test = @json($product); // prints product in json object
+    console.log(test)
+    </script> --}}
 </body>
 </html>
