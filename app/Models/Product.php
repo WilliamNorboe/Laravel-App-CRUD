@@ -30,7 +30,7 @@ class Product extends Model
         return $slug;
     }
 
-    protected static function boot()
+    protected static function boot() // runs when product is created
     {
         parent::boot();
 
