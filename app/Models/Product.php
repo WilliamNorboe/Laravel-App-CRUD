@@ -16,7 +16,7 @@ class Product extends Model
     //     return 'title'; // db column name you would like to appear in the url.
     // }
 
-    public static function generateUniqueSlug($name)
+    public static function generateUniqueSlug($name) // creates slug based off product name
     {
         $slug = Str::slug($name);
         $originalSlug = $slug;
