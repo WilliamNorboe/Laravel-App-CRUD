@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-use App\Models\Product;
+use App\Models\Product; // does not need to be here
 
 Route::get('/', function () {
     $products = Product::all();
