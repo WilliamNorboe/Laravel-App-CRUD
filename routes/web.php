@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FlightController;
 use App\Http\Controllers\ProductController;
+use App\Models\Flight;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Product; // does not need to be here
@@ -19,3 +21,5 @@ Route::put('/product/{product}', [ProductController::class, 'updateProd'])->name
 Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/product/view/{product}', [ProductController::class, "show"])->name("product.view");
+
+Route::get('/flight', [FlightController::class, 'index'])->name("flight.index");
