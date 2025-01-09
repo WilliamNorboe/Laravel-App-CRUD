@@ -42,12 +42,11 @@ class FlightController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'airline' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
         ]);
 
         Flight::create($request->all());
 
-        return redirect()->route('flights.index')->with('success', 'Flight created successfully.');
+        return redirect()->route('flight.index')->with('success', 'Flight created successfully.');
     }
 
     /**
