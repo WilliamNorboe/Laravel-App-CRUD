@@ -83,7 +83,6 @@ class FlightController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'airline' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
         ]);
 
         $flight->update($request->all());
