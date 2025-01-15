@@ -68,7 +68,7 @@ class FlightController extends Controller
      */
     public function edit(Flight $flight)
     {
-        return view('flights.edit', compact('flight'));
+        return view('flights.edit',  compact('flight'));
     }
 
     /**
