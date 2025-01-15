@@ -40,7 +40,7 @@
         </div> --}}
 
         <button type="submit" class="btn btn-primary">Create Flight</button>
-        <a href="{{ route('flight.index') }}" class="btn btn-secondary">Cancel</a>
+        <a href="{{ route('flight.index') }}" class="btn btn-secondary">Cancel</a> 
     </form>
 
 </div>
