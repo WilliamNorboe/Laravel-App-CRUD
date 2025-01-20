@@ -23,7 +23,7 @@
     {{-- change action later --}}
     <form action="{{ route('flight.store') }}" method="POST">
         @csrf <!-- Include CSRF token for security -->
-        @method('PUT')
+        @method('PUT') 
         <div class="mb-3">
             <label for="name" class="form-label">Flight Name</label>
             <input type="text" class="form-control" id="name" name="name" value="{{ $product->name }}" required>
