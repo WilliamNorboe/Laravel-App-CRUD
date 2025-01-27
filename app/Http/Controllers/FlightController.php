@@ -46,7 +46,7 @@ class FlightController extends Controller
 
         Flight::create($request->all());
 
-        return redirect()->route('flight.index')->with('success', 'Flight created successfully.');
+        return redirect()->route('flight.index')->with('success', 'Flight was created successfully.');
     }
 
     /**
