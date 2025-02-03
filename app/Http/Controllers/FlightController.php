@@ -32,7 +32,7 @@ class FlightController extends Controller
     }
 
     /**
-     * Store a newly created flight in storage. 
+     * Store a newly created flight in the storage. 
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
