@@ -28,7 +28,7 @@ class FlightController extends Controller
      */
     public function create()
     {
-        return view('flights.create');
+        return view('flights.create'); 
     }
 
     /**
