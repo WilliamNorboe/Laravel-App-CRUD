@@ -10,7 +10,7 @@ use App\Models\Flight;
 class FlightController extends Controller
 {
     /**
-     * Display a listing of the flights.
+     * Display listing of the flights.
      *
      * @return \Illuminate\Http\Response
      */
