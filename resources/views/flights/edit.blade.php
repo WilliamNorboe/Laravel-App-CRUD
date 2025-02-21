@@ -20,7 +20,7 @@
             </ul>
         </div>
     @endif
-    {{-- change action later --}}
+    {{-- change action later to update instead of store --}}
     <form action="{{ route('flight.store') }}" method="POST">
         @csrf <!-- Include CSRF token for security -->
         @method('PUT') 
