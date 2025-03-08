@@ -78,7 +78,7 @@ class FlightController extends Controller
      * @param  \App\Models\Flight  $flight
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Flight $flight)
+    public function updateFlight(Request $request, Flight $flight)
     {
         $request->validate([
             'name' => 'required|string|max:255',
@@ -87,7 +87,7 @@ class FlightController extends Controller
 
         $flight->update($request->all());
 
-        return redirect()->route('flights.index')->with('success', 'Flight updated successfully.');
+        return redirect()->route('flight.index')->with('success', 'Flight updated successfully.');
     }
 
     /**
@@ -100,7 +100,7 @@ class FlightController extends Controller
     {
         $flight->delete();
 
-        return redirect()->route('flights.index')->with('success', 'Flight deleted successfully.');
+        return redirect()->route('flight.index')->with('success', 'Flight deleted successfully.');
     }
 }
 
