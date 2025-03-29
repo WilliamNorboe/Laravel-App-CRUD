@@ -22,6 +22,7 @@ Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/product/view/{product}', [ProductController::class, "show"])->name("product.view");
 
+// flights
 Route::get('/flight', [FlightController::class, 'index'])->name("flight.index");
 Route::get('/flight/create', [FlightController::class, 'create'])->name("flight.create");
 Route::post('/flight/store', [FlightController::class, 'store'])->name("flight.store");
