@@ -20,7 +20,6 @@
             </ul>
         </div>
     @endif
-    {{-- change action later to update instead of store --}}
     <form action="{{ route('flight.updateFlight', ['flight' => $flight->id]) }}" method="POST">
         @csrf <!-- Include CSRF token for security -->
         @method('PUT') 
