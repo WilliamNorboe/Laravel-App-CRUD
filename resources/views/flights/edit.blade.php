@@ -21,7 +21,7 @@
         </div>
     @endif
     <form action="{{ route('flight.updateFlight', ['flight' => $flight->id]) }}" method="POST">
-        @csrf <!-- Include CSRF token for security -->  
+        @csrf <!-- Include CSRF token for security -->    
         @method('PUT') 
         <div class="mb-3">
             <label for="name" class="form-label">Flight Name</label>
