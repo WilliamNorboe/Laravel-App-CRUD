@@ -28,7 +28,7 @@
             <input type="text" class="form-control" id="name" name="name" value="{{ $flight->name }}" required>
         </div>
 
-        <div class="mb-3">  
+        <div class="mb-3">   
             <label for="airline" class="form-label">Airline</label>
             <input type="text" class="form-control" id="airline" name="airline" value="{{ $flight->airline }}" required>
         </div>  
