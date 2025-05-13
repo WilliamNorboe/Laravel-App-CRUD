@@ -18,7 +18,7 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-        </div> 
+        </div>  
     @endif
     <form action="{{ route('flight.updateFlight', ['flight' => $flight->id]) }}" method="POST">
         @csrf <!-- Include CSRF token for security -->    
